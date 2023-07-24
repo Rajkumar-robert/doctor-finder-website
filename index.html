@@ -2,38 +2,108 @@
 <html>
 <head>
   <title>Doctor Searching Website</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url("https://e0.pxfuel.com/wallpapers/38/395/desktop-wallpaper-background-solid-glare-light-color-widescreen-16-9-background-solid-light-purple.jpg");
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .heading {
+      font-size: 3rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .search-form {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .search-form label,
+    .search-form select,
+    .search-form input {
+      margin: 5px;
+      font-size: 1.2rem;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .search-form select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-size: 20px;
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+    }
+
+    .search-form input:focus {
+      outline: 2px solid blue;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+  </style>
 </head>
 <body>
-  <h1>Doctor Searching Website</h1>
-  <form action="search.php" method="GET">
-    <label for="city">Enter Location:</label>
-    <input type="text" name="city" id="city" placeholder="Enter location..." required>
-    <label for="specialty">Select Specialty:</label>
-    <select name="specialty" id="specialty">
-      <option value="">All</option>
-      <option value="Cardiology">Cardiology</option>
-      <option value="Pediatrics">Pediatrics</option>
-      <option value="Dermatology">Dermatology</option>
-      <option value="Orthopedics">Orthopedics</option>
-      <option value="Ophthalmology">Ophthalmology</option>
-      <option value="Gynecology">Gynecology</option>
-      <option value="Internal Medicine">Internal Medicine</option>
-      <option value="Neurology">Neurology</option>
-      <option value="Dentistry">Dentistry</option>
-      <option value="Psychiatry">Psychiatry</option>
-      <option value="Gastroenterology">Gastroenterology</option>
-      <option value="Obstetrics">Obstetrics</option>
-      <option value="Urology">Urology</option>
-      <option value="Allergy and Immunology">Allergy and Immunology</option>
-      <option value="Rheumatology">Rheumatology</option>
-      <option value="Otolaryngology">Otolaryngology</option>
-      <option value="Endocrinology">Endocrinology</option>
-      <option value="Hematology">Hematology</option>
-      <option value="Nephrology">Nephrology</option>
-      <option value="Radiology">Radiology</option>
-    </select>
-    <button type="submit">Search</button>
-  </form>
-  <!-- Display search results here -->
+  <div class="container">
+    <h1 class="heading">Doctor Finder</h1>
+    <form action="search.php" method="GET" class="search-form">
+      <label for="city">Enter Location:</label>
+      <input type="text" name="city" id="city" placeholder="Enter location..." required>
+      <label for="specialty">Select Specialty:</label>
+      <select name="specialty" id="specialty">
+        <option value="">All</option>
+        <option value="Cardiology">Cardiology</option>
+        <option value="Pediatrics">Pediatrics</option>
+        <option value="Dermatology">Dermatology</option>
+        <option value="Orthopedics">Orthopedics</option>
+        <option value="Ophthalmology">Ophthalmology</option>
+        <option value="Gynecology">Gynecology</option>
+        <option value="Internal Medicine">Internal Medicine</option>
+        <option value="Neurology">Neurology</option>
+        <option value="Dentistry">Dentistry</option>
+        <option value="Psychiatry">Psychiatry</option>
+        <option value="Gastroenterology">Gastroenterology</option>
+        <option value="Obstetrics">Obstetrics</option>
+        <option value="Urology">Urology</option>
+        <option value="Allergy and Immunology">Allergy and Immunology</option>
+        <option value="Rheumatology">Rheumatology</option>
+        <option value="Otolaryngology">Otolaryngology</option>
+        <option value="Endocrinology">Endocrinology</option>
+        <option value="Hematology">Hematology</option>
+        <option value="Nephrology">Nephrology</option>
+        <option value="Radiology">Radiology</option>
+      </select>
+      <button type="submit">Search</button>
+    </form>
+  </div>
 </body>
 </html>
